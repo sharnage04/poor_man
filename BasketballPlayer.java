@@ -159,6 +159,13 @@ public class BasketballPlayer {
 		}
 		return 0;
 	}
+	
+	public double getMissedFreeThrowPercent() {
+		if (freeThrowsAttempted > 0) {
+			return 100.0 * (freeThrowsAttempted - freeThrowsMade) / freeThrowsAttempted;
+		}
+		return 0;
+	}
 
 	/**
 	 * Gets the 2 point shot percent made. For example if there were 5 2 point shots attempted and 3 
@@ -169,6 +176,13 @@ public class BasketballPlayer {
 	public double getTwoPointerPercent() {
 		if(twoPointersAttempted>0) {
 			return 100.0*twoPointersMade/twoPointersAttempted;
+		}
+		return 0;
+	}
+	
+	public double getMissedTwoPointerPercent() {
+		if (twoPointersAttempted > 0) {
+			return 100.0 * (twoPointersAttempted - twoPointersMade) / twoPointersAttempted;
 		}
 		return 0;
 	}
@@ -185,6 +199,13 @@ public class BasketballPlayer {
 		}
 		return 0;
 	}
+	
+	public double getMissedThreePointerPercent() {
+        if(threePointersAttempted>0) {
+            return 100.0*(threePointersAttempted-threePointersMade)/threePointersAttempted;
+        }
+        return 0;
+    }
 
 	/**
 	 *  Returns a string representing the player. The format should exactly match this example:
